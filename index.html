@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Codex Checkers</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div>
+        <h1>Codex Checkers</h1>
+        <p class="subtitle">Mandatory captures • Multi-jumps • Kings</p>
+      </div>
+      <div class="controls">
+        <button id="undoButton" type="button">Undo</button>
+        <button id="restartButton" type="button">Restart</button>
+      </div>
+    </header>
+
+    <section class="status-panel">
+      <div class="status-card">
+        <h2>Current Turn</h2>
+        <p id="turnIndicator" class="turn-indicator">Red</p>
+        <p id="forcedIndicator" class="forced-indicator" aria-live="polite"></p>
+      </div>
+      <div class="status-card">
+        <h2>Move Counter</h2>
+        <p id="moveCounter" class="move-counter">0</p>
+      </div>
+      <div class="status-card">
+        <h2>Game Status</h2>
+        <p id="gameStatus" class="game-status">Ready to play</p>
+      </div>
+    </section>
+
+    <main class="game-area">
+      <div id="board" class="board" role="grid" aria-label="Checkers board"></div>
+      <aside class="history-panel">
+        <h2>Move History</h2>
+        <ol id="moveHistory" class="move-history"></ol>
+      </aside>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
